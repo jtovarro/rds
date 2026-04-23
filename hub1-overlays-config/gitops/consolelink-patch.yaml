@@ -1,5 +1,5 @@
 ---
 - op: replace
-  path: "/spec"
+  path: "/spec/href"
   value:
-    href: "https://ztp-server-ztp.apps.hub1-jct.gmbros.local/"
+    value: "https://ztp-server-ztp.apps.hub1-jct.gmbros.local/"
