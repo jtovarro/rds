@@ -4,11 +4,14 @@ metadata:
   # by default, the argo user is <argo-metadata.name>-argocd-application-controller
   name: "ztp-argocd-application-controller"
   namespace: "ztp"
+  annotations:
+    argocd.argoproj.io/sync-wave: "-45"
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   annotations:
+    argocd.argoproj.io/sync-wave: "-45"
     argocds.argoproj.io/name: "ztp"
     argocds.argoproj.io/namespace: "ztp"
   labels:
@@ -104,6 +107,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   annotations:
+    argocd.argoproj.io/sync-wave: "-45"
     argocds.argoproj.io/name: "ztp"
     argocds.argoproj.io/namespace: "ztp"
   labels:
@@ -131,6 +135,8 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: "ztp-cluster"
+  annotations:
+    argocd.argoproj.io/sync-wave: "-45"
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -144,6 +150,8 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   name: "ztp-policy"
+  annotations:
+    argocd.argoproj.io/sync-wave: "-45"
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
@@ -157,6 +165,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   annotations:
+    argocd.argoproj.io/sync-wave: "-45"
     argocds.argoproj.io/name: "ztp"
     argocds.argoproj.io/namespace: "ztp"
   labels:
@@ -177,6 +186,7 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   annotations:
+    argocd.argoproj.io/sync-wave: "-45"
     argocds.argoproj.io/name: "ztp"
     argocds.argoproj.io/namespace: "ztp"
   labels:

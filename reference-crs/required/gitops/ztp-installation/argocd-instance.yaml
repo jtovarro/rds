@@ -2,7 +2,7 @@ apiVersion: "argoproj.io/v1alpha1"
 kind: ArgoCD
 metadata:
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "50"
   name: "ztp"
   namespace: "ztp"
 spec:
