@@ -4,10 +4,8 @@ kind: Kustomization
 
 resources:
   - ../../reference-crs/required/gitops/
-  - ../../reference-crs/required/gitops/ztp-installation/
 
 patches:
-  - path: consolelink-patch.yaml
   - target:
       group: argoproj.io
       version: v1alpha1
