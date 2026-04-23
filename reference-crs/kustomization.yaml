@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   # everything under required is mandatory
   - required/gitops/
+  - required/storage/
   - required/acm/
   - required/talm/
-
+  - required/vault/
