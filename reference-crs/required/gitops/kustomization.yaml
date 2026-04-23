@@ -2,6 +2,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - addPluginsMCSB.yaml
+  - addPluginsPolicy.yaml
+  - addPluginsPolicyNS.yaml
+  - addPluginsPolicyPlacement.yaml
+  - addPluginsPolicyPlacementBinding.yaml
   - app-project.yaml
   - argocd-application.yaml
   - clusterrolebinding.yaml

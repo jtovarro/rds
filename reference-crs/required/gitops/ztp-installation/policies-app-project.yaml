@@ -3,7 +3,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
   name: policy-app-project
-  namespace: ztp
+  namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "100"
 spec:

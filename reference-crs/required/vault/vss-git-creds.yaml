@@ -3,7 +3,7 @@ apiVersion: secrets.hashicorp.com/v1beta1
 kind: VaultStaticSecret
 metadata:
   name: vso-git-creds-secret
-  namespace: ztp
+  namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "-20"
 spec:

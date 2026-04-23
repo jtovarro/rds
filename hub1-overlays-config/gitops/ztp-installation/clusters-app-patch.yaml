@@ -3,13 +3,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: clusters
-  namespace: ztp
+  namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-wave: "100"
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: ztp
+    namespace: openshift-gitops
   project: ztp-app-project
   source:
     path: clusters/

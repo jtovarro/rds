@@ -22,9 +22,3 @@ resources:
 patches:
   - path: hub1-overlays-config/gitops/ztp-installation/clusters-app-patch.yaml
   - path: hub1-overlays-config/gitops/ztp-installation/policies-app-patch.yaml
-  - target:
-      group: console.openshift.io
-      version: v1
-      kind: ConsoleLink
-      name: ztp-gitops-link
-    path: hub1-overlays-config/gitops/ztp-installation/consolelink-patch.yaml

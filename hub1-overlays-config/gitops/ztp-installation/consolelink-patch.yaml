@@ -1,4 +1,0 @@
----
-- op: replace
-  path: /spec/href
-  value: "https://ztp-server-ztp.apps.hub1-jct.gmbros.local/"

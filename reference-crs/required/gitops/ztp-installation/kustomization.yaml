@@ -6,10 +6,6 @@ resources:
   - policies-app-project.yaml
   - policies-app.yaml
   - ztp-app-project.yaml
-  - ztp-argocd-instance.yaml
-  - ztp-cluster-rolebinding.yaml
-  - ztp-consolelink.yaml
-  - ztpNS.yaml
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "100"
