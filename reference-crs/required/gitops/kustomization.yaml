@@ -4,7 +4,6 @@ kind: Kustomization
 resources:
   - app-project.yaml
   - argocd-application.yaml
-  - clusterrole.yaml
   - clusterrolebinding.yaml
   - gitopsNS.yaml
   - gitopsOperatorGroup.yaml
