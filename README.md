@@ -204,9 +204,7 @@ Make any necessary change. In general, you will point to the forked repository w
 Having ArgoCD ready and the git repository with all the overlays configured. It is time to install the ArgoCD Application that will trigger the deployment of the telco hub.
 
 ```bash
-> kustomize build example-overlays-config/gitops/ | oc apply -f -
-configmap/argocd-ssh-known-hosts-cm configured
-secret/ztp-repo created
+> kustomize build hub1-overlays-config/gitops/ | oc apply -f -
 appproject.argoproj.io/infra created
 application.argoproj.io/hub-config created
 ```
