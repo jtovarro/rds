@@ -4,6 +4,7 @@ kind: Kustomization
 
 resources:
   - ../../reference-crs/required/gitops/
+  - ../../reference-crs/required/gitops/ztp-installation/
 
 patches:
   - target:
