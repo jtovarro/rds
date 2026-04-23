@@ -12,3 +12,9 @@ patches:
       kind: Application
       name: hub-config
     path: init-argocd-app.yaml
+  - target:
+      group: console.openshift.io
+      version: v1
+      kind: ConsoleLink
+      name: ztp-gitops-link
+    path: consolelink-patch.yaml

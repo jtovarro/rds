@@ -1,0 +1,5 @@
+---
+- op: replace
+  path: "/spec"
+  value:
+    href: "https://ztp-server-ztp.apps.hub1-jct.gmbros.local/"
