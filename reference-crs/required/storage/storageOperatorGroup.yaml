@@ -9,6 +9,8 @@ metadata:
   namespace: openshift-storage
 spec:
   upgradeStrategy: Default
+  targetNamespaces:
+    - openshift-storage
 ---
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
@@ -20,3 +22,5 @@ metadata:
   namespace: openshift-lvm-storage
 spec:
   upgradeStrategy: Default
+  targetNamespaces:
+    - openshift-storage
