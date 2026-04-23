@@ -97,3 +97,9 @@ rules:
   - clusterlogforwarders
   verbs:
   - '*'
+- apiGroups:
+  - batch
+  resources:
+  - jobs
+  verbs:
+  - '*'
