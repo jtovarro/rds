@@ -1,0 +1,23 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: policies
+  namespace: ztp
+  annotations:
+    argocd.argoproj.io/sync-wave: "100"
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: ztp
+  project: policy-app-project
+  source:
+    path: policies/
+    repoURL: https://github.com/jtovarro/core-ztp.git
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
