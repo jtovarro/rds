@@ -75,7 +75,7 @@ spec:
         - mkdir -p /.config/kustomize/plugin/policy.open-cluster-management.io/v1/policygenerator && cp /policy-generator/PolicyGenerator-not-fips-compliant /.config/kustomize/plugin/policy.open-cluster-management.io/v1/policygenerator/PolicyGenerator
       command:
         - /bin/bash
-      image: "{{ .Values.mgmt.gitops.multicluster_operators_subscription }}"
+      image: "registry.redhat.io/rhacm2/multicluster-operators-subscription-rhel9:v2.15"
       name: policy-generator-install
       imagePullPolicy: Always
       volumeMounts:
