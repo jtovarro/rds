@@ -10,3 +10,15 @@ metadata:
 spec:
   targetNamespaces:
   - open-cluster-management
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "-40"
+    operatorframework.io/bundle-unpack-min-retry-interval: 10m
+  name: multicluster-engine-group
+  namespace: multicluster-engine
+spec:
+  targetNamespaces:
+  - multicluster-engine
