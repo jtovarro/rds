@@ -20,4 +20,9 @@ resources:
   - reference-crs/required/gitops/ztp-installation
 
 patches:
-  - path: hub1-overlays-config/gitops/consolelink-patch.yaml
+  - target:
+      group: console.openshift.io
+      version: v1
+      kind: ConsoleLink
+      name: ztp-gitops-link
+    path: hub1-overlays-config/gitops/consolelink-patch.yaml
