@@ -1,0 +1,39 @@
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "-40"
+  name: mce-prereq-job
+  namespace: multicluster-engine
+spec:
+  template:
+    spec:
+      dnsPolicy: ClusterFirst
+      restartPolicy: Never
+      serviceAccount: mce-prereq-sa
+      serviceAccountName: mce-prereq-sa
+      terminationGracePeriodSeconds: 300
+      containers:
+      - image: registry.redhat.io/openshift4/ose-tools-rhel8:latest
+        name: mce-prereq-job
+        resources: {}  
+        command:
+        - /bin/bash
+        - -c
+        - |
+          #
+          # THIS SCRIPT DOES:
+          # - CONCATENATE THE DEFAULT PULL SECRET WITH THE CREDENTIALS FOR QUAY AND SAVE IT IN A NEW SECRET
+          # - CONCATENATE THE CA BUNDLE WITH THE INGRESS CERT AND THE EXISTING MIRROR LIST IN ANOTHER CONFIGMAP
+          #
+          echo "copy pull secret CM to MCE namespace"
+          echo "extract pull secret"
+          oc -n openshift-config extract secret/pull-secret --confirm --to=/tmp/
+
+          echo "create new pull secret"
+          oc -n multicluster-engine create secret generic assisted-deployment-pull-secret \
+            --type=kubernetes.io/dockerconfigjson \
+            --from-file=.dockerconfigjson=/tmp/.dockerconfigjson
+
+          echo "All done! Hooray!"

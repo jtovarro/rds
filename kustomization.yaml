@@ -1,0 +1,19 @@
+# kustomization file including different overays over the
+# reference crs
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+
+  # other not optional overlays
+  - hub1-overlays-config/gitops/
+  - hub1-overlays-config/acm/
+  - hub1-overlays-config/registry/
+
+  # mandatory resources not managed by any overlay
+  - reference-crs/required/talm/
+
+  # include this content if you want to include the argocd
+  # configuration and apps for gitops ztp management of cluster
+  # installation and configuration
+  - reference-crs/required/gitops/ztp-installation

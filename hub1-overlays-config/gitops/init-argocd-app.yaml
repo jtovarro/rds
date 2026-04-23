@@ -1,0 +1,7 @@
+---
+- op: replace
+  path: "/spec/source"
+  value:
+    path: "./"
+    repoURL: "https://github.com/jtovarro/rds.git"
+    targetRevision: "main"

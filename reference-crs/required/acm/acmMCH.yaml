@@ -1,0 +1,67 @@
+---
+apiVersion: operator.open-cluster-management.io/v1
+kind: MultiClusterHub
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "-30"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+    installer.open-cluster-management.io/mce-subscription-spec: '{"channel": "stable-2.10","installPlanApproval": "Manual","name": "multicluster-engine","source": "redhat-operators","startingCSV": "multicluster-engine.v2.10.1","sourceNamespace": "openshift-marketplace"}'
+    #installer.open-cluster-management.io/oadp-subscription-spec: '{"channel": "stable-1.5","installPlanApproval": "Manual","name": "redhat-oadp-operator","source": "redhat-operators","startingCSV": "oadp-operator.v1.5.5","sourceNamespace": "openshift-marketplace"}'
+  name: multiclusterhub
+  namespace: open-cluster-management
+spec:
+  availabilityConfig: High
+  ingress:
+    sslCiphers:
+    - ECDHE-ECDSA-AES256-GCM-SHA384
+    - ECDHE-RSA-AES256-GCM-SHA384
+    - ECDHE-ECDSA-AES128-GCM-SHA256
+    - ECDHE-RSA-AES128-GCM-SHA256
+  overrides:
+    components:
+      - configOverrides: {}
+        enabled: false
+        name: cluster-backup
+      - configOverrides: {}
+        enabled: true
+        name: console
+      - configOverrides: {}
+        enabled: true
+        name: insights
+      - configOverrides: {}
+        enabled: true
+        name: grc
+      - configOverrides: {}
+        enabled: true
+        name: cluster-lifecycle
+      - configOverrides: {}
+        enabled: true
+        name: volsync
+      - configOverrides: {}
+        enabled: true
+        name: multicluster-engine
+      - configOverrides: {}
+        enabled: true
+        name: search
+      - configOverrides: {}
+        enabled: true
+        name: app-lifecycle
+      - configOverrides: {}
+        enabled: true
+        name: cluster-permission
+      - configOverrides: {}
+        enabled: true
+        name: multicluster-observability
+      - configOverrides: {}
+        enabled: true
+        name: submariner-addon
+      - configOverrides: {}
+        enabled: true
+        name: siteconfig
+      - configOverrides: {}	
+        enabled: false	
+        name: fine-grained-rbac-preview	
+      - configOverrides: {}	
+        enabled: false	
+        name: cnv-mtv-integrations-preview
+  separateCertificateManagement: false
