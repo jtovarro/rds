@@ -4,6 +4,8 @@ kind: VaultAuth
 metadata:
   name: vault-auth
   namespace: vault-secrets-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "-30"
 spec:
   allowedNamespaces:
     - "*"

@@ -1,5 +1,0 @@
-apiVersion: v2
-name: storage
-description: Storage deploy using LVMS and ODF
-type: application
-version: 0.1.0

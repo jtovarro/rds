@@ -4,6 +4,8 @@ kind: VaultStaticSecret
 metadata:
   name: vso-git-creds-secret
   namespace: ztp
+  annotations:
+    argocd.argoproj.io/sync-wave: "-20"
 spec:
   type: kv-v2 
   mount: secret

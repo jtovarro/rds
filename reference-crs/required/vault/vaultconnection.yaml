@@ -4,5 +4,7 @@ kind: VaultConnection
 metadata:
   name: default
   namespace: vault-secrets-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "-30"
 spec:
   address: http://vault:8200
