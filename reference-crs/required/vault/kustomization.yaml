@@ -4,7 +4,7 @@ kind: Kustomization
 resources:
   - vaultconnection.yaml
   - vaultauth.yaml
-  - #vss-git-creds.yaml
+  #- vss-git-creds.yaml
   - vaultNS.yaml
   - vaultOperatorGroup.yaml
   - vaultSubscription.yaml
