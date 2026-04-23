@@ -8,6 +8,7 @@ resources:
   # other not optional overlays
   - hub1-overlays-config/gitops/
   - hub1-overlays-config/acm/
+  - hub1-overlays-config/ztp-installation/
 
   # mandatory resources not managed by any overlay
   - reference-crs/required/storage/
