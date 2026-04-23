@@ -15,7 +15,7 @@ spec:
   destinations:
   - namespace: 'ztp*'
     server: '*'
-  - namespace: 'policies-sub'
+  - namespace: 'openshift-gitops'
     server: '*'
   namespaceResourceWhitelist:
   - group: ''
