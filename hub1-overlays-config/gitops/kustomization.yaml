@@ -4,7 +4,6 @@ kind: Kustomization
 
 resources:
   - ../../reference-crs/required/gitops/
-  - ../../reference-crs/required/gitops/ztp-installation/
 
 patches:
   - target:
@@ -13,9 +12,3 @@ patches:
       kind: Application
       name: hub-config
     path: init-argocd-app.yaml
-  - target:
-      group: console.openshift.io
-      version: v1
-      kind: ConsoleLink
-      name: ztp-gitops-link
-    path: consolelink-patch.yaml
