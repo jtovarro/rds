@@ -1,0 +1,22 @@
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "-40"
+    operatorframework.io/bundle-unpack-min-retry-interval: 10m
+  name: openshift-storage-group
+  namespace: openshift-storage
+spec:
+  upgradeStrategy: Default
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "-40"
+    operatorframework.io/bundle-unpack-min-retry-interval: 10m
+  name: openshift-lvm-storage-group
+  namespace: openshift-lvm-storage
+spec:
+  upgradeStrategy: Default
