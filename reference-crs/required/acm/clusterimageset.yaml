@@ -4,5 +4,6 @@ metadata:
   name: openshift-mirror
   annotations:
     argocd.argoproj.io/sync-wave: "-20"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   releaseImage: "quay.io/openshift-release-dev/ocp-release:4.20.0-x86_64"
