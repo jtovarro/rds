@@ -19,8 +19,7 @@ ArgoCD is one of the main key components of the Telco Hub, because is in charge 
 In this init phase we can install ArgoCD with the existing `reference-crs` for GitOps, basically using the Openshift GitOps operator. In case you want to proceed the installation with the existing `reference-crs` for GitOps: 
 
 ```bash
-oc apply -f reference-crs/required/gitops/clusterrole.yaml \
-  -f reference-crs/required/gitops/clusterrolebinding.yaml \
+oc apply -f reference-crs/required/gitops/clusterrolebinding.yaml \
   -f reference-crs/required/gitops/gitopsNS.yaml \
   -f reference-crs/required/gitops/gitopsOperatorGroup.yaml \
   -f reference-crs/required/gitops/gitopsSubscription.yaml
@@ -207,6 +206,7 @@ Having ArgoCD ready and the git repository with all the overlays configured. It 
 > kustomize build hub1-overlays-config/gitops/ | oc apply -f -
 appproject.argoproj.io/infra created
 application.argoproj.io/hub-config created
+...
 ```
 
 
