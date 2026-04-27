@@ -21,6 +21,10 @@ spec:
       requests:
         storage: 50Gi
     storageClassName: "lvms-data-lab-vg1"
+  # mirrorRegistryRef:
+  #   name: mirror-registry-config
+  # OSImageCACertRef:
+  #   name: http-server-ca
   osImages:
     - openshiftVersion: "4.20"
       url: https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.20/latest/rhcos-4.20.11-x86_64-live-iso.x86_64.iso
