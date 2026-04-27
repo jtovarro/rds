@@ -14,3 +14,11 @@ patches:
       kind: MultiClusterObservability
       name: observability
     path: storage-mco-patch.yaml
+
+  # configure mirror registry for ACM
+  # - target:
+  #     group: ""
+  #     version: v1
+  #     kind: ConfigMap
+  #     name: mirror-registry-config
+  #   path: acmMirrorRegistryCM-patch.yaml

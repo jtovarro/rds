@@ -7,12 +7,10 @@ resources:
   - acmSubscription.yaml
   - acmMCH.yaml
   - acmMCE.yaml
+  #- acmMirrorRegistryCM.yaml
   - acmAgentServiceConfig.yaml
   - acmPerfSearch.yaml
   - acmProvisioning.yaml
   - clusterimageset.yaml
-  - job-ai-prereqs.yaml
-  - rbac-job-ai/role.yaml
-  - rbac-job-ai/rolebinding.yaml
-  - rbac-job-ai/serviceAccount.yaml
+  - pullSecret.yaml
  
