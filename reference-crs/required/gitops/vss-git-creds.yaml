@@ -9,7 +9,7 @@ metadata:
 spec:
   type: kv-v2 
   mount: secret
-  path: webapp/git-creds
+  path: gmbros/hub1/git-creds
   destination:
     name: git-creds
     create: true

@@ -13,3 +13,4 @@ resources:
   - gitopsNS.yaml
   - gitopsOperatorGroup.yaml
   - gitopsSubscription.yaml
+  #- vss-git-creds.yaml

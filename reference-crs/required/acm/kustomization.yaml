@@ -12,5 +12,5 @@ resources:
   - acmPerfSearch.yaml
   - acmProvisioning.yaml
   - clusterimageset.yaml
-  - pullSecret.yaml
+  - vss-pullSecret.yaml
  
