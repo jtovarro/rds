@@ -5,7 +5,7 @@ metadata:
   name: vss-git-creds-secret
   namespace: openshift-gitops
   annotations:
-    argocd.argoproj.io/sync-wave: "-20"
+    argocd.argoproj.io/sync-wave: "-30"
 spec:
   type: kv-v2 
   mount: secret
