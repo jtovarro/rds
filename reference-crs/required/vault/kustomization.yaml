@@ -18,7 +18,12 @@ helmCharts:
     valuesInline:
       global:
         openshift: true
+      injector:
+        image:
+          repository: "docker.io/hashicorp/vault-k8s"
       server:
+        image:
+          repository: "docker.io/hashicorp/vault"
         dev:
           enabled: false
         ui:
