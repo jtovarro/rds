@@ -7,3 +7,37 @@ resources:
   - vaultNS.yaml
   - vaultOperatorGroup.yaml
   - vaultSubscription.yaml
+
+helmCharts:
+  - name: vault
+    releaseName: vault
+    namespace: vault-secrets-operator
+    repo: https://helm.releases.hashicorp.com
+    version: 0.28.0
+    valuesInline:
+      global:
+        openshift: true
+      server:
+        dev:
+          enabled: false
+        ui:
+          enabled: true
+        dataStorage:
+          enabled: true
+          size: 10Gi
+          storageClass: "lvms-data-lab-vg1" 
+        auditStorage:
+          enabled: true
+        ha:
+          enabled: true
+          replicas: 1
+          raft:
+            enabled: true
+            setNodeId: true
+
+annotations:
+  - pairs:
+      argocd.argoproj.io/sync-wave: "-35"
+    targets:
+      - select:
+          labelSelector: "app.kubernetes.io/instance=vault"
