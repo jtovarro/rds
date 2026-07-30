@@ -202,6 +202,8 @@ Make any necessary change. In general, you will point to the forked repository w
 
 Having ArgoCD ready and the git repository with all the overlays configured. It is time to install the ArgoCD Application that will trigger the deployment of the telco hub.
 
+*NOTE: Review that the targetRevision defined in hub1-overlays-config/gitops/init-argocd-app.yaml is the desired based in the OpenShift version installed.*
+
 ```bash
 > kustomize build hub1-overlays-config/gitops/ | oc apply -f -
 appproject.argoproj.io/infra created
