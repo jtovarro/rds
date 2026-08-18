@@ -7,6 +7,7 @@ resources:
 
   # other not optional overlays
   - hub1-overlays-config/gitops/
+  - reference-crs/required/gitops/plugins/
   - hub1-overlays-config/acm/
 
   # mandatory resources not managed by any overlay
