@@ -19,10 +19,10 @@ ArgoCD is one of the main key components of the Telco Hub, because is in charge 
 In this init phase we can install ArgoCD with the existing `reference-crs` for GitOps, basically using the Openshift GitOps operator. In case you want to proceed the installation with the existing `reference-crs` for GitOps: 
 
 ```bash
-oc apply -f reference-crs/required/gitops/clusterrolebinding.yaml \
-  -f reference-crs/required/gitops/gitopsNS.yaml \
-  -f reference-crs/required/gitops/gitopsOperatorGroup.yaml \
-  -f reference-crs/required/gitops/gitopsSubscription.yaml
+oc apply -f reference-crs/required/gitops/operator/clusterrolebinding.yaml \
+  -f reference-crs/required/gitops/operator/gitopsNS.yaml \
+  -f reference-crs/required/gitops/operator/gitopsOperatorGroup.yaml \
+  -f reference-crs/required/gitops/operator/gitopsSubscription.yaml
 ```
 
 Wait the operator to be installed:
