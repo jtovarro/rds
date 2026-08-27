@@ -38,7 +38,7 @@ spec:
     kind: PolicySet
   - group: cluster.open-cluster-management.io
     kind: ManagedClusterSetBinding
-  - group: secrets.hashicorp.com
-    kind: VaultStaticSecret
+  - group: external-secrets.io
+    kind: ExternalSecret
   sourceRepos:
   - '*'
