@@ -4,6 +4,6 @@ kind: Namespace
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-45"
-  name: vault-secrets-operator
+  name: external-secrets-operator
   labels:
     openshift.io/cluster-monitoring: "true"

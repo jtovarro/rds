@@ -5,8 +5,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-40"
     operatorframework.io/bundle-unpack-min-retry-interval: 10m
-  name: vault-secrets-operator-group
-  namespace: vault-secrets-operator
+  name: external-secrets-operator-group
+  namespace: external-secrets-operator
 spec:
   upgradeStrategy: Default
   targetNamespaces: null

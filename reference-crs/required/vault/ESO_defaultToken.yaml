@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: default-sa-token
+  namespace: vault-secrets-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "-40"
+    kubernetes.io/service-account.name: default
+type: kubernetes.io/service-account-token

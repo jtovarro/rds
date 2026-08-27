@@ -4,11 +4,11 @@ kind: Subscription
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "-40"
-  name: vault-secrets-operator-subscription
-  namespace: vault-secrets-operator
+  name: openshift-external-secrets-operator
+  namespace: external-secrets-operator
 spec:
-  channel: stable
+  channel: stable-v1.2
   installPlanApproval: Automatic
-  name: vault-secrets-operator
-  source: certified-operators
+  name: openshift-external-secrets-operator
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
