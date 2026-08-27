@@ -1,0 +1,21 @@
+---
+apiVersion: external-secrets.io/v1
+kind: ExternalSecret
+metadata:
+  name: example
+  namespace: multicluster-engine
+  annotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  refreshInterval: "1m"
+  secretStoreRef:
+    name: vault
+    kind: ClusterSecretStore
+  target:
+    name: example
+    creationPolicy: Owner
+    template:
+      type: Opaque
+  dataFrom:
+    - extract:
+        key: "gmbros/sno1/pull-secret"

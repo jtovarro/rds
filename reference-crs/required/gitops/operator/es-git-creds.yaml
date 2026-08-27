@@ -1,0 +1,22 @@
+---
+apiVersion: external-secrets.io/v1
+kind: ExternalSecret
+metadata:
+  name: git-creds
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "-30"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  refreshInterval: "30s"
+  secretStoreRef:
+    name: vault
+    kind: ClusterSecretStore
+  target:
+    name: git-creds
+    creationPolicy: Owner
+    template:
+      type: Opaque
+  dataFrom:
+    - extract:
+        key: "gmbros/hub1/git-creds"
