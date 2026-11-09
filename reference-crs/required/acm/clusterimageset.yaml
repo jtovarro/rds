@@ -1,9 +1,20 @@
+---
 apiVersion: hive.openshift.io/v1
 kind: ClusterImageSet
 metadata:
-  name: openshift-mirror
+  name: openshift-mirror-v4
   annotations:
     argocd.argoproj.io/sync-wave: "-20"
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 spec:
   releaseImage: "quay.io/openshift-release-dev/ocp-release:4.20.0-x86_64"
+---
+apiVersion: hive.openshift.io/v1
+kind: ClusterImageSet
+metadata:
+  name: openshift-mirror-v5
+  annotations:
+    argocd.argoproj.io/sync-wave: "-20"
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+spec:
+  releaseImage: "quay.io/openshift-release-dev/ocp-release:5.0.0-x86_64"

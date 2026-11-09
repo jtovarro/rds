@@ -32,3 +32,10 @@ spec:
       # pick version from https://mirror.openshift.com/pub/openshift-v4/x86_64/clients/ocp/4.20.0/release.txt
       version: 9.6.20260112-0
       cpuArchitecture: "x86_64"
+
+    - openshiftVersion: "5.0"
+      url: https://mirror.openshift.com/pub/openshift-v5/dependencies/rhcos/5.0/5.0.0/rhcos-5.0.0-x86_64-live-iso.x86_64.iso
+      rootFSUrl: https://mirror.openshift.com/pub/openshift-v5/dependencies/rhcos/5.0/5.0.0/rhcos-5.0.0-x86_64-live-rootfs.x86_64.img
+      # pick version from https://mirror.openshift.com/pub/openshift-v5/x86_64/clients/ocp/5.0.0/release.txt
+      version: 10.2.20261027-0
+      cpuArchitecture: "x86_64"
