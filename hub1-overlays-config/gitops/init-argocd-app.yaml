@@ -4,4 +4,4 @@
   value:
     path: "./"
     repoURL: "https://github.com/jtovarro/rds.git"
-    targetRevision: "main"
+    targetRevision: "ocp-v4.20"
