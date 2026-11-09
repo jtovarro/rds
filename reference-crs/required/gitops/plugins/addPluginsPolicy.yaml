@@ -65,7 +65,7 @@ spec:
                         emptyDir: {}
                     initContainers:
                       - name: "policy-generator-install"
-                        image: "registry.redhat.io/rhacm2/multicluster-operators-subscription-rhel9:v2.15"
+                        image: "registry.redhat.io/rhacm2/multicluster-operators-subscription-rhel9:v5.0.0-1794014696"
                         imagePullPolicy: "Always"
                         volumeMounts:
                           - name: "kustomize"
