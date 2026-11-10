@@ -5,7 +5,7 @@ metadata:
   name: policy-app-project
   namespace: openshift-gitops
   annotations:
-    argocd.argoproj.io/sync-wave: "100"
+    argocd.argoproj.io/sync-wave: "95"
 spec:
   clusterResourceWhitelist:
   - group: ''
