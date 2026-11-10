@@ -11,12 +11,6 @@ metadata:
   namespace: open-cluster-management
 spec:
   availabilityConfig: High
-  ingress:
-    sslCiphers:
-    - ECDHE-ECDSA-AES256-GCM-SHA384
-    - ECDHE-RSA-AES256-GCM-SHA384
-    - ECDHE-ECDSA-AES128-GCM-SHA256
-    - ECDHE-RSA-AES128-GCM-SHA256
   overrides:
     components:
       - configOverrides: {}
